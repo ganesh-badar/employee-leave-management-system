@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>Employee Leave Management System (ELMS)</display-name>
+    <description>Enterprise HR Portal for Workforce Attendance and Leave Management</description>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <!-- Filters -->
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.elms.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>AuthenticationFilter</filter-name>
+        <filter-class>com.elms.filter.AuthenticationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- Servlets -->
+    <servlet>
+        <servlet-name>AuthServlet</servlet-name>
+        <servlet-class>com.elms.controller.AuthServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AuthServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+        <url-pattern>/register</url-pattern>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DashboardServlet</servlet-name>
+        <servlet-class>com.elms.controller.DashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DashboardServlet</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LeaveServlet</servlet-name>
+        <servlet-class>com.elms.controller.LeaveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LeaveServlet</servlet-name>
+        <url-pattern>/leave/apply</url-pattern>
+        <url-pattern>/leave/my-leaves</url-pattern>
+        <url-pattern>/leave/cancel</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminLeaveServlet</servlet-name>
+        <servlet-class>com.elms.controller.AdminLeaveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLeaveServlet</servlet-name>
+        <url-pattern>/admin/leaves</url-pattern>
+        <url-pattern>/admin/leaves/approve</url-pattern>
+        <url-pattern>/admin/leaves/reject</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminEmployeeServlet</servlet-name>
+        <servlet-class>com.elms.controller.AdminEmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminEmployeeServlet</servlet-name>
+        <url-pattern>/admin/employees</url-pattern>
+        <url-pattern>/admin/employees/new</url-pattern>
+        <url-pattern>/admin/employees/edit</url-pattern>
+        <url-pattern>/admin/employees/status</url-pattern>
+        <url-pattern>/admin/employees/quota</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminDepartmentServlet</servlet-name>
+        <servlet-class>com.elms.controller.AdminDepartmentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminDepartmentServlet</servlet-name>
+        <url-pattern>/admin/departments</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProfileServlet</servlet-name>
+        <servlet-class>com.elms.controller.ProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProfileServlet</servlet-name>
+        <url-pattern>/profile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>StaticPageServlet</servlet-name>
+        <servlet-class>com.elms.controller.StaticPageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StaticPageServlet</servlet-name>
+        <url-pattern>/privacy-policy</url-pattern>
+        <url-pattern>/terms-and-conditions</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <error-page>
+        <error-code>403</error-code>
+        <location>/WEB-INF/views/error/403.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/views/error/404.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/views/error/500.jsp</location>
+    </error-page>
+
+</web-app>

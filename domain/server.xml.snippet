@@ -1,0 +1,18 @@
+<!-- ===================================================================== -->
+<!-- Apache Tomcat conf/server.xml Custom Domain Virtual Host Snippet       -->
+<!-- Add within the <Engine name="Catalina" ...> section                    -->
+<!-- ===================================================================== -->
+
+<Host name="leave.internal.corp" appBase="webapps"
+      unpackWARs="true" autoDeploy="true">
+
+    <Alias>hrms.local</Alias>
+
+    <Context path="" docBase="elms" reloadable="true">
+        <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    </Context>
+
+    <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
+           prefix="leave_internal_corp_access_log" suffix=".txt"
+           pattern="%h %l %u %t &quot;%r&quot; %s %b" />
+</Host>

@@ -1,0 +1,40 @@
+# Maven Build Artifacts
+target/
+*.war
+*.ear
+*.nar
+*.jar
+
+# Local Embedded Database & Cache
+data/
+*.mv.db
+*.trace.db
+*.lock.db
+
+# Embedded Tomcat Work Directories
+tomcat.*/
+work/
+temp/
+
+# Log Files
+*.log
+logs/
+
+# IDE & Editor Files
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.project
+.classpath
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Transient Test / Session Artifacts
+cookies*.txt
+*.html.tmp

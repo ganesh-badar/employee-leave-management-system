@@ -1,0 +1,9 @@
+# =====================================================================
+# Custom Domain Mapping for Employee Leave Management System (ELMS)
+# Add this entry to:
+#   Windows: C:\Windows\System32\drivers\etc\hosts
+#   Linux/macOS: /etc/hosts
+# =====================================================================
+
+127.0.0.1       leave.internal.corp
+127.0.0.1       hrms.local
