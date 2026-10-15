@@ -228,16 +228,5 @@ To run the application under the internal corporate domain `leave.internal.corp`
 
 ---
 
-## 7. Compliance Verification Checklist
 
-- [x] **No purple gradients:** Strict corporate palette consisting of slate (`#0f172a`), navy (`#1e293b`), and steel blue (`#2563eb`).
-- [x] **No pill-shaped buttons:** Modern 4px border-radius rectangular buttons.
-- [x] **No fake reviews or fake metrics:** Only authentic employee counts, balance figures, and pending review requests.
-- [x] **No vague hero copy:** Pure HR workflow labels, field definitions, and system guidance.
-- [x] **No emoji icon dashes:** 100% crisp, inline SVG vector icons with geometric line weights.
-- [x] **No animations/scroll jacking:** Crisp, instant page transitions without cursor animations or motion blur.
-- [x] **Connected custom domain:** Configured virtual host for `leave.internal.corp`.
-- [x] **Added favicon:** Corporate calendar vector icon (`favicon.svg`, `favicon.ico`).
-- [x] **No "Made with AI" labels:** 100% enterprise-ready clean code and UI.
-- [x] **Privacy Policy page:** Fully implemented at `/privacy-policy`.
-- [x] **Terms & Conditions page:** Fully implemented at `/terms-and-conditions`.
+
