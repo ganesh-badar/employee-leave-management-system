@@ -19,16 +19,17 @@
     --color-border-strong: #cbd5e1;
 
     /* Dark Surfaces (Header / Sidebar accent) */
-    --color-navy-950: #070809;
-    --color-navy-900: #0e1015;
-    --color-navy-800: #131620;
-    --color-navy-700: #1e2536;
+    --color-navy-950: #111522;
+    --color-navy-900: #1E263B;
+    --color-navy-800: #303D59;
+    --color-navy-700: #536684;
+    --color-navy-secondary: #98A9C4;
 
     /* Text */
     --color-text-primary: #0f172a;
     --color-text-secondary: #475569;
     --color-text-muted: #64748b;
-    --color-text-inverted: #f1f5f9;
+    --color-text-inverted: #DCE3EF;
 
     /* Cobalt Accent */
     --color-primary: #2563eb;

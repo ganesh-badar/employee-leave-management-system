@@ -2,7 +2,8 @@
 
 ## 1. Design Philosophy & System Identity
 - **Product Truth**: Enterprise HR Leave Management & Operations System for corporate workforce administration.
-- **Mode**: Operate — Professional enterprise B2B dashboard, scanability, structured audit trails, tabular dense layouts.
+- **Mode**: Operate — Professional enterprise B2B dashboard, scanability, structured audit trails.
+- **Color Theme**: Slate Steel Palette (`#111522` → `#DCE3EF`) integrated with enterprise surfaces.
 - **Craft Floor Rules**: Zero gradient text, zero pill buttons (crisp 2px-4px radius), full browser surface theming (custom scrollbar, selection, focus ring, caret, tabular nums), minimum functional font size of 12px.
 
 ## 2. Color Palette & Surfaces
@@ -15,17 +16,18 @@
   --color-border: #e2e8f0;
   --color-border-strong: #cbd5e1;
 
-  /* Enterprise Slate Accents */
-  --color-navy-950: #070809;
-  --color-navy-900: #0e1015;
-  --color-navy-800: #131620;
-  --color-navy-700: #1e2536;
+  /* Enterprise Slate Accents (#111522 → #DCE3EF ramp) */
+  --color-navy-950: #111522;      /* Deepest header background */
+  --color-navy-900: #1E263B;      /* App header / belt */
+  --color-navy-800: #303D59;      /* Brand badge / active tab */
+  --color-navy-700: #536684;      /* Dividing borders */
+  --color-navy-secondary: #98A9C4;
+  --color-text-inverted: #DCE3EF; /* Header text */
 
-  /* Typography */
+  /* Body Text */
   --color-text-primary: #0f172a;
   --color-text-secondary: #475569;
   --color-text-muted: #64748b;
-  --color-text-inverted: #f1f5f9;
 
   /* Cobalt Primary Action */
   --color-primary: #2563eb;
@@ -40,8 +42,7 @@
 ```
 
 ## 3. Typography
-- **Display**: `'Space Grotesk', system-ui, sans-serif` for metric totals, card titles, and section headers (-0.02em letter-spacing).
-- **Body**: `'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif` for data grid, forms, navigation.
+- **Stack**: High-Performance System UI Stack (`-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto...`)
 - **Data & Tables**: `font-variant-numeric: tabular-nums` for dates, balances, leave counts, employee IDs.
 - **Scale**:
   - Root: 16px
@@ -57,8 +58,7 @@
 - **Header**: 56px enterprise dark belt (`var(--color-navy-900)`), subtle 1px border.
 
 ## 5. Browser Surfaces
-- `::selection`: `rgba(37, 99, 235, 0.25)` with `#0f172a`
+- `::selection`: `rgba(83, 102, 132, 0.35)` with `#111522`
 - `input, textarea, select`: `caret-color: #2563eb`
 - `:focus-visible`: `2px solid #2563eb`, outline offset 2px
 - `::-webkit-scrollbar`: 7px width, `#cbd5e1` thumb with `#f8fafc` track
-
