@@ -15,6 +15,10 @@
 </head>
 <body>
 
+<div class="ribbon-banner" style="background:#0e121d; border-bottom:1px solid #232a3d; padding:7px 16px; text-align:center; font-size:0.78rem; color:#98A9C4; letter-spacing:0.02em;">
+    <span>Enterprise HR Operations &bull; Real-time Leave Balance Tracking &bull; Jakarta EE &amp; HikariCP MySQL Connection Pool</span>
+</div>
+
 <header class="app-header">
     <div class="brand-wrapper">
         <a href="<%= cp %>/dashboard" style="display:flex; align-items:center; gap:10px; color:#ffffff; text-decoration:none;">
